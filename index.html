@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>000웹사이트</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.css">
+
+    <style>
+        /* 영문폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        /*INTRO + ABOUT 통합 화면*/
+
+
+        .intro-container {
+
+            width: 100%;
+            height: 100vh;
+
+            padding: 50px;
+
+            display: flex;
+
+            position: relative;
+
+            background-color: black;
+
+        }
+
+
+        /* 왼쪽 영역 */
+
+        .intro-left {
+
+            display: flex;
+            align-items: flex-start;
+
+        }
+
+
+        .vertical-line {
+
+            width: 1px;
+
+            height: 800px;
+
+            background: white;
+
+            margin-right: 50px;
+
+        }
+
+
+
+        .portfolio-text {
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding-top: 10px;
+
+        }
+
+
+
+        .portfolio-text span {
+
+            font-size: 130px;
+
+            line-height: 0.85;
+
+            font-weight: 700;
+
+            letter-spacing: -5px;
+
+            color: #E13726;
+
+            font-family: "Bodoni Moda", serif;
+            font-optical-sizing: auto;
+            font-weight: weight 400;
+            font-style: normal;
+
+        }
+
+
+
+        /* 중앙 소개 */
+
+        .intro-center {
+
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+            color: white;
+
+
+        }
+
+
+
+        .intro-center h1 {
+
+            color: white;
+            font-size: 42px;
+
+            margin-bottom: 35px;
+            font-family: "Bodoni Moda", serif;
+            font-optical-sizing: auto;
+            font-weight: weight 400;
+            font-style: normal;
+
+        }
+
+
+
+        .intro-center p {
+
+
+            font-size: 28px;
+
+            line-height: 1.5;
+
+            color: #eee;
+
+            font-weight: 300;
+
+        }
+
+
+
+        .separator-line {
+
+
+            width: 1px;
+
+            height: 60px;
+
+            background: white;
+
+            margin: 35px auto;
+
+        }
+
+
+
+        .name {
+
+            color: white;
+
+            font-size: 20px;
+
+            font-weight: 300;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        /* ABOUT 오른쪽 하단 배치 */
+
+        .about-info span {
+            color: #E13726;
+        }
+
+        .about-mini {
+
+
+            position: absolute;
+
+
+            right: 80px;
+
+            bottom: 80px;
+
+
+        }
+
+
+
+        .about-mini h2 {
+
+
+            font-size: 40px;
+
+            color: #E13726;
+
+            margin-bottom: 35px;
+
+
+        }
+
+
+
+        .about-mini div {
+
+            margin-bottom: 20px;
+
+            font-size: 20px;
+
+            color: white;
+
+        }
+
+
+        .about-mini span {
+
+            display: block;
+
+            font-size: 14px;
+
+            color: #E13726;
+
+            margin-bottom: 5px;
+
+            letter-spacing: 1px;
+
+        }
+
+        /*  스크롤 다운 */
+        .scroll-down {
+
+            margin-top: 150px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #999;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .scroll-down span {
+
+            width: 6px;
+
+            height: 6px;
+
+            background: #E13726;
+
+            border-radius: 50%;
+
+        }
+
+        .scroll-circle {
+            margin-top: 45px;
+            animation: scrollMove 2s infinite ease-in-out;
+            color: #E13726;
+            ;
+        }
+
+
+        @keyframes scrollMove {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+
+        }
+
+        /* 버튼 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .works-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 각 섹션 공통 */
+        .section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .work-box {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 배경 이미지 및 효과 */
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease;
+        }
+
+        /* 섹션별 이미지 (실제 이미지 경로로 수정하세요) */
+        .section-graphic .bg {
+            background-image: url('img/그래픽배경.png');
+        }
+
+        .section-web .bg {
+            background-image: url('img/웹세트.png');
+        }
+
+        /* 오버레이 (어두운 효과) */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            transition: background 0.5s ease;
+        }
+
+        /* 버튼 스타일 */
+        .btn {
+            z-index: 2;
+            padding: 15px 40px;
+            background: white;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        /* 호버 효과 */
+        .work-box:hover .bg {
+            filter: blur(5px);
+            transform: scale(1.05);
+        }
+
+        .work-box:hover .overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .work-box:hover .btn {
+            background: transparent;
+            color: white;
+            border-color: white;
+            transform: scale(1.1);
+        }
+
+        /* 중앙 제목 */
+        .title {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: white;
+            font-size: 50px;
+            letter-spacing: 2px;
+
+            font-family: "Bodoni Moda", serif;
+            font-optical-sizing: auto;
+            font-weight: weight 800;
+            font-style: normal;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section intro" data-anchor="intro">
+
+            <div class="intro-container">
+
+
+                <!-- 왼쪽 -->
+                <div class="intro-left">
+
+                    <div class="vertical-line"></div>
+
+                    <div class="portfolio-text">
+                        <span>PORT</span>
+                        <span>FOLIO</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- 중앙 -->
+            <div class="intro-center">
+
+                <h1>UI/UX Designer</h1>
+
+                <p>
+                    사용자의 시선을 고려한,<br>
+                    오래 기억되는 디자인을 만듭니다.
+                </p>
+
+
+                <div class="separator-line"></div>
+
+                <span class="name">
+                    Kim Yoon Hee
+                </span>
+                <div class="scroll-circle">
+                    SCROLL
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- ABOUT -->
+            <!-- ABOUT -->
+            <div class="about-mini">
+
+                <div class="about-info">
+
+                    <div>
+                        <span>ROLE</span>
+                        UI/UX Designer<br>
+                        Web Publisher
+                    </div>
+
+
+                    <div>
+                        <span>SKILLS</span>
+                        Figma · Photoshop<br>
+                        HTML · CSS · JavaScript<br>
+                        Cafe24
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 웹/그래픽 버튼 -->
+        <div class="section works" data-anchor="works">
+
+            <div class="title">
+                SELECTED WORKS
+            </div>
+
+
+            <div class="works-container">
+
+                <!-- 그래픽 디자인 -->
+                <a href="graphic-list.html" class="work-box section-graphic">
+
+                    <div class="bg"></div>
+
+                    <div class="overlay"></div>
+
+                    <div class="btn">
+                        GRAPHIC DESIGN
+                    </div>
+
+                </a>
+
+
+
+                <!-- 웹 디자인 -->
+                <a href="web-list.html" class="work-box section-web">
+
+                    <div class="bg"></div>
+
+                    <div class="overlay"></div>
+
+                    <div class="btn">
+                        WEB DESIGN
+                    </div>
+
+                </a>
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.js"></script>
+
+    <script>
+        $('#fullpage').fullpage({
+            scrollingSpeed: 1200,
+            easing: 'easeInOutCubic',
+            navigation: true,
+            scrollOverflow: false
+        });
+    </script>
+
+</body>
+
+</html>
